@@ -28,7 +28,8 @@ for example a POST request with the following curl check the counter:
 #### My improvement tasks:
 
 * The counting will be starting from zero on each service reload.
-* The ansilble should restart the services.
+* The ansilble should restart the services in different modes.
+* Improve the deployment part
 
 
 
