@@ -6,9 +6,25 @@
     - name: Set hostname
       hostname: name={{inventory_hostname}}
 
-- name: Base bamboo service
+- name: Base smart-panda service
   hosts: base
   become: yes
+  vers:
+    service_name: smart-panda
+    source_dir: /home/panda/devops-exercise-nh
+    sorce_name: smart_panda.py
   roles:
-    - { role: nodejs, tags: nodejs }
-    - { role: bamboo, tags: bamboo }
+    - { role: python, tags: python }
+    - { role: smart_panda , tags: smart_panda }
+
+
+- name: Base img-panda service
+  hosts: base
+  become: yes
+  vers:
+    service_name: img_panda
+    source_dir: /home/panda/devops-exercise-nh
+    sorce_name: img_panda.py
+  roles:
+    - { role: python, tags: python }
+    - { role: img_panda , tags: img_panda }

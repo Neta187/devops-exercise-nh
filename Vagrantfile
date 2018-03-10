@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.ssh.forward_agent = true
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", type: dhcp
 
   # Create a base machine 
   config.vm.define "base" do |base|
