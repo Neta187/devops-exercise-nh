@@ -10,7 +10,7 @@
   hosts: base
   become: yes
   vers:
-    service_name: smart-panda
+    service_name: smart_panda
     source_dir: /home/panda/devops-exercise-nh
     sorce_name: smart_panda.py
   roles:
